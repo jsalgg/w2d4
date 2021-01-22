@@ -20,6 +20,25 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 // your code here!
 
+arrowMyMap = (arr, cb) => {
+  let newArr = [];
+
+  //obtain by calling calback on each element of array
+  //pass in element to callback
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(cb(arr[i]));
+  }
+
+  return newArr;
+};
+let result1 = arrowMyMap([100, 25, 81, 64], Math.sqrt);
+console.log(result1); // [ 10, 5, 9, 8 ]
+
+const yell = (el) => el.toUpperCase() + "!";
+
+let result2 = arrowMyMap(["run", "Forrest"], yell);
+console.log(result2); // [ 'RUN!', 'FORREST!' ]
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
