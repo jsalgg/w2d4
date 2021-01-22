@@ -16,8 +16,45 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-// your code here!
+interrupter = (interruptingWord) => {
+  //Return function with the string
+  return function (string){
+    let newArray = string.split(" ");
+    let result = "";
 
+    newArray.forEach((el, i, arr) => {
+
+      result += el + " " + interruptingWord + " ";
+
+    });
+    let splitArray = result.split(" ");
+    splitArray.pop();
+    splitArray.pop();
+    joinedArray = splitArray.join(" ");
+    return joinedArray;
+
+
+  }
+}
+
+//Josh Function
+// function interrupter(phrase){
+//   return function (string){
+//     let words = string.split(" ");
+//     for (let i = 0; i < words.length; i++){
+//       if (i % 2 !== 0){
+//         words.splice(i, 0, phrase);
+//       }
+//     }
+//     return words.join(" ");
+//   }
+// }
+let rudePerson = interrupter("what"); // => returns a function
+console.log(rudePerson("how are you")); // prints "how what are what you"
+console.log(rudePerson("I like pie")); // prints "I what like what pie"
+
+let rudePerson2 = interrupter("yo"); // => returns a function
+console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
