@@ -31,7 +31,6 @@ Example 4:
 // your code here
 countDownTimer = (num) => {
   let count = num;
-  console.log("start");
   if (count > 0) {
     return function () {
       count--;
@@ -39,6 +38,8 @@ countDownTimer = (num) => {
       if (count === 0) {
         //console.log(count);
         return "Happy New Year!";
+
+
       } else {
         //console.log(count);
         return countDownTimer;

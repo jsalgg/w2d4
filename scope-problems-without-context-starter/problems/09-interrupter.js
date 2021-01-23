@@ -16,26 +16,26 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-interrupter = (interruptingWord) => {
-  //Return function with the string
-  return function (string){
-    let newArray = string.split(" ");
-    let result = "";
-
-    newArray.forEach((el, i, arr) => {
-
-      result += el + " " + interruptingWord + " ";
-
-    });
-    let splitArray = result.split(" ");
-    splitArray.pop();
-    splitArray.pop();
-    joinedArray = splitArray.join(" ");
-    return joinedArray;
-
-
-  }
-}
+// interrupter = (interruptingWord) => {
+//   //Return function with the string
+//   return function (string){
+//     let newArray = string.split(" ");
+//     let result = "";
+//
+//     newArray.forEach((el, i, arr) => {
+//
+//       result += el + " " + interruptingWord + " ";
+//
+//     });
+//     let splitArray = result.split(" ");
+//     splitArray.pop();
+//     splitArray.pop();
+//     joinedArray = splitArray.join(" ");
+//     return joinedArray;
+//
+//
+//   }
+// }
 
 //Josh Function
 // function interrupter(phrase){
